@@ -1,0 +1,93 @@
+@import '../../App.scss';
+.navBar{
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    // background-color:var(--main-color);
+    background: linear-gradient(to top, transparent 0%, rgb(0,0,0,0.3 )50%);
+    z-index: 999;
+    // display:flex;
+    width: 100%;
+    &.scrolled{
+        background-color: var(--main-color);
+      }
+    .container{
+        display: flex;
+        padding: 0 50px;
+        align-items: center;
+        justify-content:space-between;
+        height: 70px;
+
+        .left{
+            display: flex;
+            align-items:center;
+        img{
+            height: 30px;
+            @include mobile {
+                display: none;
+            }
+
+     
+        }
+        span{
+            margin-left: 10px;
+            cursor: pointer;
+
+            @include tablet {
+                display: none;
+            }
+            &.navbarmain{
+                @include tablet {
+                    display: block;
+                }   
+            }
+
+        }
+    }
+    .right{
+        display: flex;
+        align-items:center;
+        
+        .icon{
+            margin: 0 20px;
+            cursor: pointer;
+        }
+        img{
+            height: 30px;
+            width: 30px;
+            border-radius: 5px;object-fit: cover;
+            cursor: pointer;
+
+     
+        }
+
+        .profile{
+          .options{
+              display: none;
+          }  
+          &:hover{
+              .options{
+                  display:flex;
+                  flex-direction: column;
+                  justify-content: space-evenly;
+                  position:absolute;
+                  //top: 20px;
+                  background-color: var(--main-color);
+                  border-radius: 5px;
+                  width:70px;
+                  height:70px;
+              }
+              span{
+                  cursor: pointer;
+                  padding-left: 10px;
+              }
+          }
+        }
+    }
+        // span{
+
+        // }
+        
+    }
+}
